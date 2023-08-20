@@ -1,0 +1,205 @@
+.match-container.live div#match-hour,.match-container.end div#match-hour {
+	display: none;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+.match-container.end div#match-time {
+	display: none;
+}
+
+.match-container {
+	overflow: hidden;
+	text-align: center;
+	background: #eceef2;
+	margin-bottom: 12px;
+	position: relative;
+	border-radius: 8px;
+}
+
+div#AnubisMatch {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+div#AnubisMatch .match-container.soon div#result {
+	display: none;
+}
+
+.match-container div#match-time {
+	font-size: 18px;
+}
+
+anubmatch li {
+	list-style: none!important;
+}
+
+anubmatch img {
+	width: 70px!important;
+	height: 70px!important;
+}
+
+.match-container h4 {
+	margin: 30px 0;
+}
+
+.match-container a {
+	color: #222;
+}
+
+.no-data__msg {
+	min-height: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	color: #666;
+}
+
+.match-container.live #match-time,.match-container.gools #match-time,.match-container.finshed #match-time {
+	display: none;
+}
+
+.match-container.comming #result,.match-container.commingsoon #result {
+	display: none;
+}
+
+.right-team,.left-team,.match-center {
+	width: 33.33333333%;
+	float: right;
+}
+
+.team-logo {
+	float: right;
+	width: 50%;
+}
+
+.left-team .team-logo {
+	float: left;
+}
+
+.team-logo img {
+	margin: 10px auto!important;
+	display: flex!important;
+}
+
+.team-name {
+	margin: 28px auto;
+	display: table;
+}
+
+.match-timing {
+	margin: 12px auto;
+}
+
+#result {
+	font-size: 21px;
+	letter-spacing: 5px;
+	margin-right: -5px;
+}
+
+.match-timing .date,.match-timing .live:before {
+	color: #fff;
+	background: #263545;
+	border-radius: 8px;
+	font-size: 14px;
+	width: 90px;
+	line-height: 1.9;
+	display: table;
+	margin: auto;
+	margin-top: 6px;
+	position: relative;
+}
+
+.match-timing .live::before {
+	min-width: 53px;
+	right: 0;
+	content: "جارية الآن";
+	position: absolute;
+	animation: blinker 500ms ease-in-out infinite;
+	margin: 0;
+}
+
+.match-timing .live {
+	background: #d00000;
+}
+
+.match-timing .end {
+	background: #474747;
+}
+
+.match-timing .soon {
+	background: #0f6f37;
+}
+
+.match-info {
+	border-top: 1px solid #ddd;
+	display: table;
+	overflow: hidden;
+	width: 100%;
+}
+
+.match-info li {
+	width: 33.33333333%;
+	float: right;
+	font-size: 14px;
+	font-weight: 100;
+}
+
+.overlay-match {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer;
+	background: #0006;
+	z-index: 9;
+}
+
+.match-container:hover .overlay-match {
+	opacity: 1;
+}
+
+.text-match {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 45px;
+	margin: auto;
+	left: 0;
+	top: 0;
+	width: 45px;
+	background: no-repeat center url("data:image/svg+xml;charset=utf8,%3Csvg aria-hidden='true' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' %3E%3Cpath fill='%23fff' d='M256,0C114.617,0,0,114.615,0,256s114.617,256,256,256s256-114.615,256-256S397.383,0,256,0z M344.48,269.57l-128,80 c-2.59,1.617-5.535,2.43-8.48,2.43c-2.668,0-5.34-0.664-7.758-2.008C195.156,347.172,192,341.82,192,336V176 c0-5.82,3.156-11.172,8.242-13.992c5.086-2.836,11.305-2.664,16.238,0.422l128,80c4.676,2.93,7.52,8.055,7.52,13.57 S349.156,266.641,344.48,269.57z' class=''%3E%3C/path%3E%3C/svg%3E");
+}
+
+@media screen and (max-width: 500px) {
+	.team-logo img {
+		margin: 7px auto!important;
+		margin-bottom: 0!important;
+		width: 50px!important;
+		height: 50px!important;
+	}
+
+	.team-logo {
+		width: 100%;
+	}
+
+	.team-name {
+		margin: 7px auto;
+		margin-top: 0;
+	}
+
+	.match-container .match-info {
+		display: none;
+	}
+}
